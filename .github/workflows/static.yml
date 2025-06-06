@@ -5,7 +5,6 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -31,13 +30,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p deploy
+
+          # Copy HTML files to root level for main URL access
+          cp -r HTML/* deploy/
+
+          # Copy CSS and IMAGES to root level
+          cp -r CSS deploy/
+          cp -r IMAGES deploy/
+
+          # Fix paths in HTML files if they use relative paths like ../CSS/ or ../IMAGES/
+          find deploy -name "*.html" -type f -exec sed -i 's|../CSS/|CSS/|g' {} \; || true
+          find deploy -name "*.html" -type f -exec sed -i 's|../IMAGES/|IMAGES/|g' {} \; || true
+
+          # Also handle lowercase references just in case
+          find deploy -name "*.html" -type f -exec sed -i 's|../css/|CSS/|g' {} \; || true
+          find deploy -name "*.html" -type f -exec sed -i 's|../images/|IMAGES/|g' {} \; || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload deploy directory
+          path: './deploy'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
