@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Newsletter Signup - NextGen Gaming Ltd.</title>
-    <link rel="stylesheet" href="newsletter.css">
-    <script>
-        // Show welcome alert on page load
-        window.onload = function() {
-            alert("Welcome to the NextGen Gaming Ltd. - Newsletter Signup");
-        };
+  <meta charset="UTF-8">
+  <title>Newsletter Signup - GXL Gaming Ltd.</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script>
+    // Alert when the page loads
+    window.onload = function() {
+      alert("Welcome to GXL Gaming Ltd. - Newsletter Signup");
+    };
 
-        // Validate name fields before form submission
-        function validateForm() {
-            var fname = document.forms["newsletterForm"]["firstName"].value.trim();
-            var lname = document.forms["newsletterForm"]["lastName"].value.trim();
-            if (fname === "" || lname === "") {
-                alert("First Name and Last Name are required.");
-                return false; // prevent form submission
-            }
-            return true; // allow form submission
-        }
-    </script>
+    // Validate that first and last name fields are not empty
+    function validateForm() {
+      const firstName = document.forms["newsletterForm"]["firstName"].value.trim();
+      const lastName = document.forms["newsletterForm"]["lastName"].value.trim();
+
+      if (firstName === "" || lastName === "") {
+        alert("Both First Name and Last Name are required.");
+        return false; // Prevent form submission
+      }
+      return true; // Allow form submission
+    }
+  </script>
+  <link rel="icon" href="../images/logo.png" type="image/png">
+
 </head>
 <body>
-    <h1>Newsletter Signup</h1>
-    <form name="newsletterForm" action="http://csusap.csu.edu.au/cgi-bin/echo_form" method="post" onsubmit="return validateForm();">
-        <!-- First Name -->
-        <label for="firstName">First Name (required):</label><br>
-        <input type="text" id="firstName" name="firstName" maxlength="60"><br><br>
+  <main>
+    <h1>GXL Gaming Ltd. - Newsletter Signup</h1>
 
-        <!-- Last Name -->
-        <label for="lastName">Last Name (required):</label><br>
-        <input type="text" id="lastName" name="lastName" maxlength="60"><br><br>
+    <form name="newsletterForm"
+          action="https://formspree.io/f/xblydjve"
+          method="POST"
+          onsubmit="return validateForm()">
 
-        <!-- Email Address -->
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" maxlength="60"><br><br>
+      <!-- Hidden input to disable captcha -->
+      <input type="hidden" name="_captcha" value="false">
 
-        <!-- Age Range -->
-        <label>Age Range:</label><br>
-        <input type="radio" name="age" value="15-25"> 15–25<br>
-        <input type="radio" name="age" value="26-35"> 26–35<br>
-        <input type="radio" name="age" value="36-45"> 36–45<br>
-        <input type="radio" name="age" value="46-55"> 46–55<br>
-        <input type="radio" name="age" value="55+"> 55+<br><br>
+      <label for="firstName">First Name (required):</label><br>
+      <input type="text" id="firstName" name="firstName" maxlength="60" required><br><br>
 
-        <!-- Services -->
-        <label>Interested Services:</label><br>
-        <input type="checkbox" name="service" value="Cloud Gaming"> Cloud Gaming<br>
-        <input type="checkbox" name="service" value="VR Experiences"> VR Experiences<br>
-        <input type="checkbox" name="service" value="Game Streaming"> Game Streaming<br>
-        <input type="checkbox" name="service" value="eSports Events"> eSports Events<br>
-        <input type="checkbox" name="service" value="Indie Game Incubator"> Indie Game Incubator<br><br>
+      <label for="lastName">Last Name (required):</label><br>
+      <input type="text" id="lastName" name="lastName" maxlength="60" required><br><br>
 
-        <!-- Comments -->
-        <label for="comments">Additional Comments:</label><br>
-        <textarea id="comments" name="comments" cols="60" rows="3"></textarea><br><br>
+      <label for="email">Email Address (required):</label><br>
+      <input type="email" id="email" name="email" maxlength="60" required><br><br>
 
-        <!-- Submit and Reset Buttons -->
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+      <p>Age Range:</p>
+      <input type="radio" id="age1" name="age" value="15-25">
+      <label for="age1">15–25</label><br>
+
+      <input type="radio" id="age2" name="age" value="26-35">
+      <label for="age2">26–35</label><br>
+
+      <input type="radio" id="age3" name="age" value="36-45">
+      <label for="age3">36–45</label><br>
+
+      <input type="radio" id="age4" name="age" value="46-55">
+      <label for="age4">46–55</label><br>
+
+      <input type="radio" id="age5" name="age" value="55+">
+      <label for="age5">55+</label><br><br>
+
+      <p>Interested Services:</p>
+      <input type="checkbox" id="game" name="service" value="Game Development">
+      <label for="game">Game Development</label><br>
+
+      <input type="checkbox" id="AR/VR Integration" name="service" value="AR/VR Integration">
+      <label for="integration">AR/VR Integration</label><br>
+
+      <input type="checkbox" id="management" name="service" value="Esports Management">
+      <label for="management">Esports Management</label><br>
+
+      <input type="checkbox" id="platform" name="service" value="Streaming Platforms">
+      <label for="platform">Streaming Platforms</label><br>
+
+      <input type="checkbox" id="response" name="service" value="Player Analytics">
+      <label for="response">Player Analytics</label><br><br>
+
+      <label for="comments">Comments or Suggestions:</label><br>
+      <textarea id="comments" name="comments" cols="60" rows="3"></textarea><br><br>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
     </form>
+  </main>
 </body>
 </html>

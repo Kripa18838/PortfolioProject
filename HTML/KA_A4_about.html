@@ -9,8 +9,10 @@
     
     <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css"> <!-- External CSS file for styling -->
+	<link rel="icon" href="../images/logo.png" type="image/png">
+
 </head>
-<body>
+<body class="dark-mode">
     <!-- Header Section: Contains the main heading and navigation links -->
     <header>
         <h1>About Me</h1> <!-- Main heading for the About Me section -->
@@ -19,9 +21,9 @@
         <nav>
             <!-- Navigation links to other pages in the portfolio -->
             <a href="index.html">Home</a>
-            <a href="KA_A2_resume.html">Resume</a>
-            <a href="KA_A2_about.html">About Me</a>
-            <a href="KA_A2_web_skills.html">Web Skills</a>
+            <a href="KA_A4_resume.html">Resume</a>
+            <a href="KA_A4_about.html">About Me</a>
+            <a href="KA_A4_web_skills.html">Web Skills</a>
 			<a href="KA_A4_webdev_skills.html">Web Dev Skills</a>
 			<a href="KA_A4_testing_skills.html">Testing Skills</a>
 			<a href="KA_A4_networking_skills.html">Networking Skills</a>
@@ -75,11 +77,22 @@
             <h2>Goals</h2> <!-- Heading for the section -->
             <p>My goal is to work in the gaming industry, focusing on game development.</p> <!-- Paragraph explaining the author's goals -->
         </section>
+		<!-- Dark/Light Mode Toggle Button -->
+        <button class="toggle-btn" onclick="toggleMode()">Toggle Dark/Light Mode</button> <!-- Button to toggle between dark and light modes -->
     </main>
 
     <!-- Footer Section: Contains copyright information -->
     <footer>
         <p>&copy; 2025 Kripa Adhikari. All Rights Reserved.</p> <!-- Copyright notice -->
     </footer>
+	  <!-- JavaScript for toggling dark/light mode -->
+    <script>
+        // Function to toggle between dark and light modes
+        function toggleMode() {
+            const body = document.querySelector('body'); // Select the body element
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
+            body.classList.toggle('light-mode'); // Toggle light mode class
+        }
+    </script>
 </body>
 </html>

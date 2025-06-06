@@ -6,15 +6,17 @@
     <meta name="author" content="Kripa Adhikari">
     <title>Graphics Skills - My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css">
+	<link rel="icon" href="../images/logo.png" type="image/png">
+
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <h1>Graphics Design Skills</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="KA_A2_resume.html">Resume</a>
-            <a href="KA_A2_about.html">About Me</a>
-            <a href="KA_A2_web_skills.html">Web Skills</a>
+            <a href="KA_A4_resume.html">Resume</a>
+            <a href="KA_A4_about.html">About Me</a>
+            <a href="KA_A4_web_skills.html">Web Skills</a>
 			<a href="KA_A4_webdev_skills.html">Web Dev Skills</a>
 			<a href="KA_A4_testing_skills.html">Testing Skills</a>
 			<a href="KA_A4_networking_skills.html">Networking Skills</a>
@@ -50,10 +52,33 @@
                 <li>Prototyping with Figma</li>
             </ol>
         </section>
+		<section id="Why these skills are useful" >
+		<p> These skills are really important because in online video games, the graphics is the most important as users get connected to the video games through graphics. If users can connect to what they see, then the game will be successful gaining more popularity. So, I think this skill will really help me in completing the tasks effectively. </p>
+		</section>
+		<!-- Game Artwork and Screenshots Section -->
+        <section id="game-art">
+            <h2>Below given are some of the graphical artworks I admire and take as an inspiration:</h2> <!-- Heading for artwork and screenshots -->
+            <!-- Images showcasing video game artwork and gameplay -->
+            <img src="../IMAGES/videogame1.jpg" alt="Game Screenshot 1"> <!-- Game screenshot 1 -->
+            <img src="../IMAGES/videogame2.jpg" alt="Game Screenshot 2"> <!-- Game screenshot 2 -->
+            <img src="../IMAGES/videogame3.jpg" alt="Game Screenshot 3"> <!-- Game screenshot 3 -->
+        </section>
+
+		<!-- Dark/Light Mode Toggle Button -->
+        <button class="toggle-btn" onclick="toggleMode()">Toggle Dark/Light Mode</button> <!-- Button to toggle between dark and light modes -->
     </main>
 
     <footer>
         <p>&copy; 2025 Kripa Adhikari. All Rights Reserved.</p>
     </footer>
+	  <!-- JavaScript for toggling dark/light mode -->
+    <script>
+        // Function to toggle between dark and light modes
+        function toggleMode() {
+            const body = document.querySelector('body'); // Select the body element
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
+            body.classList.toggle('light-mode'); // Toggle light mode class
+        }
+    </script>
 </body>
 </html>

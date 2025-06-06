@@ -6,15 +6,17 @@
     <meta name="author" content="Kripa Adhikari">
     <title>Game Web Development Skills - My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css">
+	<link rel="icon" href="../images/logo.png" type="image/png">
+
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <h1>Game Web Development Skills</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="KA_A2_resume.html">Resume</a>
-            <a href="KA_A2_about.html">About Me</a>
-            <a href="KA_A2_web_skills.html">Web Skills</a>
+            <a href="KA_A4_resume.html">Resume</a>
+            <a href="KA_A4_about.html">About Me</a>
+            <a href="KA_A4_web_skills.html">Web Skills</a>
 			<a href="KA_A4_webdev_skills.html">Web Dev Skills</a>
 			<a href="KA_A4_testing_skills.html">Testing Skills</a>
 			<a href="KA_A4_networking_skills.html">Networking Skills</a>
@@ -50,10 +52,27 @@
                 <li>Accessibility in Games</li>
             </ol>
         </section>
+		<section id="web development projects">
+		<h2> Web Development Projects </h2>
+		<p> You can view my web development projects through my linkedin page. Below given is the link to the page. </p>
+		<p>LinkedIn: <a href="https://www.linkedin.com/in/kripa-adhikari-a56146250/" target="_blank">Visit my LinkedIn</a></p>
+		</section>
+
+		<!-- Dark/Light Mode Toggle Button -->
+        <button class="toggle-btn" onclick="toggleMode()">Toggle Dark/Light Mode</button> <!-- Button to toggle between dark and light modes -->
     </main>
 
     <footer>
         <p>&copy; 2025 Kripa Adhikari. All Rights Reserved.</p>
     </footer>
+	  <!-- JavaScript for toggling dark/light mode -->
+    <script>
+        // Function to toggle between dark and light modes
+        function toggleMode() {
+            const body = document.querySelector('body'); // Select the body element
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
+            body.classList.toggle('light-mode'); // Toggle light mode class
+        }
+    </script>
 </body>
 </html>
