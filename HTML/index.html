@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for the document -->
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+    <meta name="description" content="Portfolio Home Page - Online Video Games"> <!-- Page description -->
+    <meta name="author" content="Your Name"> <!-- Author of the webpage -->
+    <title>Home - My Portfolio</title> <!-- Title of the webpage -->
+
+    <!-- Link to external CSS stylesheet for styling -->
+    <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css"> <!-- External stylesheet link -->
+</head>
+<body class="dark-mode">
+
+    <!-- Header Section: Contains the main heading and navigation links -->
+    <header>
+        <h1>Welcome to My Online Video Game Portfolio</h1> <!-- Main heading for the portfolio -->
+        <!-- Navigation links for the site -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="KA_A2_resume.html">Resume</a>
+            <a href="KA_A2_about.html">About Me</a>
+            <a href="KA_A2_web_skills.html">Web Skills</a>
+			<a href="KA_A4_webdev_skills.html">Web Dev Skills</a>
+			<a href="KA_A4_testing_skills.html">Testing Skills</a>
+			<a href="KA_A4_networking_skills.html">Networking Skills</a>
+			<a href="KA_A4_graphics_skills.html">Graphics Skills</a>
+			<a href="javascriptpage.html" target="_blank">Newsletter Signup</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section: Displays the main content of the portfolio -->
+    <main>
+        <!-- Welcome Message Section -->
+        <div id="welcome-message">
+            Welcome to my online video game portfolio
+        </div>
+
+        <!-- Image Section: Displays a personal image -->
+        <section id="images">
+            <img src="../IMAGES/kripa.jpg" alt="My Image" width="300"> <!-- Personal image -->
+			<!-- Email Link -->
+			<p>Email: <a href="mailto:adhikarikripa138@gmail.com">adhikarikripa138@gmail.com</a></p>
+			<!-- LinkedIn Link -->
+			<p>LinkedIn: <a href="https://www.linkedin.com/in/kripa-adhikari-a56146250/" target="_blank">Visit my LinkedIn</a></p>
+
+        </section>
+
+        <!-- Introduction to Online Video Games Section -->
+        <section id="intro">
+            <h2>Introduction to Online Video Games</h2> <!-- Heading for introduction -->
+            <p>Online video games have become an integral part of modern entertainment, offering immersive experiences that challenge and engage players. In this portfolio, I'll explore the definition, significance, and my passion for video games.</p> <!-- Description of online video games -->
+        </section>
+
+        <!-- Game Artwork and Screenshots Section -->
+        <section id="game-art">
+            <h2>Game Artwork and Screenshots</h2> <!-- Heading for artwork and screenshots -->
+            <!-- Images showcasing video game artwork and gameplay -->
+            <img src="../IMAGES/videogame1.jpg" alt="Game Screenshot 1"> <!-- Game screenshot 1 -->
+            <img src="../IMAGES/videogame2.jpg" alt="Game Screenshot 2"> <!-- Game screenshot 2 -->
+            <img src="../IMAGES/videogame3.jpg" alt="Game Screenshot 3"> <!-- Game screenshot 3 -->
+        </section>
+
+        <!-- Dark/Light Mode Toggle Button -->
+        <button class="toggle-btn" onclick="toggleMode()">Toggle Dark/Light Mode</button> <!-- Button to toggle between dark and light modes -->
+    </main>
+
+    <!-- Footer Section: Contains copyright information -->
+    <footer>
+        <p>&copy; 2025 Kripa Adhikari. All Rights Reserved.</p> <!-- Copyright notice -->
+    </footer>
+
+    <!-- JavaScript for toggling dark/light mode -->
+    <script>
+        // Function to toggle between dark and light modes
+        function toggleMode() {
+            const body = document.querySelector('body'); // Select the body element
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
+            body.classList.toggle('light-mode'); // Toggle light mode class
+        }
+    </script>
+
+</body>
+</html>

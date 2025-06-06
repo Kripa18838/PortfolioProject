@@ -1,0 +1,186 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #001f3d; /* Changed to dark blue */
+    color: #ffffff; /* Changed to white for better contrast */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #001f3d;
+    color: #ffffff;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-weight: bold;
+}
+
+/* Navigation Bar Styles */
+nav {
+    text-align: right;
+    margin-top: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #008b8b;
+}
+
+/* Welcome Message Styling */
+#welcome-message {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #00bcd4;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+#images img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.toggle-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Section Styling */
+main {
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Section Titles Styling */
+h2 {
+    font-size: 1.6rem;
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #001f3d;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Shared Page Styles for Resume, About Me, Web Skills */
+section {
+    margin-bottom: 30px;
+    background-color: #0a2a4f; /* Slightly lighter for contrast on dark body */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #00bcd4;
+}
+
+/* Links in Navigation */
+nav a {
+    text-decoration: none;
+    color: #00bcd4;
+}
+
+nav a:hover {
+    color: #008b8b;
+}
+
+/* General Layout Adjustments for Navigation */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Image on Home Page */
+#images img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+}
+
+/* Body Content Styling */
+body {
+    padding: 0 15px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #images img {
+        width: 120px;
+        height: 120px;
+    }
+}
